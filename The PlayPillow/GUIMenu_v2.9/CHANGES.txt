@@ -1,0 +1,103 @@
+The PlayPillow GUI 2.8
+
+Changes:
+- Uni-uploading is now gone, simplifing the concept of the program;
+- New UML Structure;
+- Added Comments everywhere;
+- Some typo's fixed.
+- JavaDoc is now available.
+
+
+Previous versions
+______________________
+======================
+The PlayPillow GUI 2.7
+
+Features:
++ Improvements on uploading files;
++ Added classes Menu and Submenu;
++ More inheritance;
++ Classes divided into packages.
++ New UML Structure
+
+
+Removed:
+- Window.java is now included in the Menu.java and therefore no longer necessary.
+
+So what's new?
+I added the Superclass Menu.java, which extends JFrame, and its subclass SubMenu.java
+Menu is the superclass of the MainMenu and SubMenu has the submenu's as descendents.
+This simplifies the concept of uploading files because less code is necessary.
+
+Version 2.7 simplifies this:
+<SubMenuClass> -> COMSelector -> HEXUploader
+(NOTE: <SubMenuClass> can be a class of any type that is a descendent of the SubMenu class.)
+It seemed more logical to use SubMenu a class than as an interface because it needs to hold
+specific values that are from its descendents. And because it needs to DO something for its
+descendents.
+
+
+
+======================
+The PlayPillow GUI 2.6
+
+Features:
++ Improvements on uploading files
++ COMSelector now has a refresh button for the ports
++ Improvements on Window.java; setting the screen is made easier now
+
+Problems detected 2.6:
+- The argument(to upload) -bxxxxxxxx, where x is a number, seems to change so now and then.
+  This is bad because the argument needs to be static.
+Possible Solutions:
+~ Autodetect on what -bxxxxxxxx the x values are.
+
+
+EXPLAINED
+Version 2.6 of The PlayPillow GUI comes with great improvements.
+The uploading is done by one central class: the HEXUploader.java.
+This simplifies the previous concept where every JFrame had its own
+way of uploading.
+
+Uploading previous versions (2.3 - 2.5):
+SubMenuModeSelection.java - > COMSelector.java -> SubMenuModeSelection.java
+SubMenuSound.java- > COMSelector.java -> SubMenuSound.java
+
+Version 2.6 simplifies this:
+<SubMenuClass> -> COMSelector -> HEXUploader
+(NOTE: <SubMenuClass> can be a class of any type that implements the SubMenu Interface.)
+
+Via a reference of the SubMenu interface, the COMSelector is able to control the methods
+that are necessary for uploading the files.
+There are some considerations in which the SubMenu Interface needs to grown to a superclass
+of the classes SubMenuModeSelection.java and SubMenuSound.java. This might be featured in
+verion 2.7 of The PlayPillow GUI.
+
+
+The PlayPillow GUI 2.5
+======================
+Big upgrades leading up to the development of v2.6, as v2.5 is just a backup plan on v2.6 
+with less features than its successor. 
+Features
++ Name changes in the directories
+
+
+======================
+The PlayPillow GUI 2.4
+This version of the PlayPillow is now under the hood fully functional ^_^, only some names 
+in the Difficulty submenu and folders(directories) should be changed. Also the submenu Sound 
+should be ready for an erase!
+
+Long story short; this version features:
++ A new background
++ A fixed location on the screen on startup
++ No longer resizable JFrames
++ Some feedback with JOptionPanes for the user when errors occur
+
+
+Happy reading
+Casper :)
+
+======================
+The PlayPillow GUI 2.3 and lower had problems with uploading which are fixed in 2.4+
+v2.3 and lower are not documented.
